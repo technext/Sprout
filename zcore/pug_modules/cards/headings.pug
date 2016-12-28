@@ -1,0 +1,34 @@
+//- Declaration
+mixin heading(content, settings)
+	//- setting default values
+	- settings = (settings || '')
+	div.heading(class=settings.class)
+
+		if content.uptitle
+			p(class='col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2')!= content.uptitle
+			.clearfix
+
+		h1= content.title
+		
+		if content.subtitle
+			p(class='col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2')!= content.subtitle
+		
+		
+		if content.buttons
+			.clearfix
+			+buttons(content.buttons)
+
+
+
+
+//- Declaration
+mixin heading__section(content, settings)
+	//- setting default values
+	- settings = (settings || '')
+	div.heading(class=settings.class)
+		h2= content.title
+		h6= content.subtitle
+		
+		
+		if content.buttons
+			+buttons(content.buttons)

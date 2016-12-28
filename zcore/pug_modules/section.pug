@@ -1,0 +1,58 @@
+//- A parent wireframe for every section
+
+//- @since version 0.4.0
+//- 
+//- params:
+//- 	content 	: {}
+//- 	settings	: {}
+	
+mixin section(content, s)
+	-
+		settings = s || {
+			attrs: '',
+			background: '',
+			container: 'container',
+			alignContent: ''
+		}
+		
+		if(s)
+			settings.attrs = s.attrs || ''
+			settings.background = s.background || ''
+			settings.container = s.container || 'container'
+			settings.alignContent = s.alignContent || ''
+
+
+
+		content = content || {
+			layout: false
+		}
+
+
+
+	section(id=settings.attrs.id, class=settings.attrs.class)
+
+		//- background controller
+		//- Optimisation to do.
+		if settings.background.parallax 
+			div.background_holder(
+				class=(settings.background.class),
+				data-top='transform: translate3d(0px, 0px, 0px)', 
+				data-top-bottom='transform: translate3d(0px, 300px, 0px)',
+				data-anchor-target='#'+settings.attrs.id,
+				style='background-image: url("'+settings.background.image+'")'
+			)
+		else
+			div.background_holder(class=(settings.background.class), style='background-image: url("'+settings.background.image+'")')
+
+
+
+		div(class=(settings.container +' '+ settings.alignContent))
+			
+			if content.heading
+				+heading__section(content.heading.content, content.heading.settings)
+
+			if content.layout
+				+#{content.layout}(content.cards, content.settings)
+
+			//- Allowing uses to use custom block content/ Layout in sections
+			block

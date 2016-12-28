@@ -1,0 +1,124 @@
+
+//
+// Button helpers
+//
+
+//from bootstrap 4
+// https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_buttons.scss
+
+@mixin button-outline-variant($color) {
+  color: $color;
+  background-image: none;
+  background-color: transparent;
+  border-color: $color;
+
+  &:hover {
+    color: #fff;
+    background-color: $color;
+        border-color: $color;
+  }
+
+  &:focus,
+  &.focus {
+    color: #fff;
+    background-color: $color;
+        border-color: $color;
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: #fff;
+    background-color: $color;
+        border-color: $color;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: #fff;
+      background-color: darken($color, 17%);
+          border-color: darken($color, 25%);
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    &:focus,
+    &.focus {
+      border-color: lighten($color, 20%);
+    }
+    &:hover {
+      border-color: lighten($color, 20%);
+    }
+  }
+}
+
+
+
+//
+//zion button styles
+//
+
+.btn{
+    padding: modular-scale(0) modular-scale(2);
+    font-family: $heading-font;
+    font-weight: 600;
+    font-size: modular-scale(-1);
+    text-transform: uppercase;
+    letter-spacing: modular-scale(-6);
+    border-radius: modular-scale(-6);
+    @include transition(all 0.2s ease-in-out);
+
+    &.btn-xs{
+        padding: modular-scale(-3) modular-scale(-1);
+    }
+
+    &.btn-sm{
+        padding: modular-scale(-1) modular-scale(1);
+    }
+    &.btn-lg{
+        padding: modular-scale(1) modular-scale(3);
+        font-size: modular-scale(0);
+    }
+}
+
+.btn-square{
+    border-radius: 0;
+}
+.btn-radius{
+    border-radius: modular-scale(2);
+}
+
+
+//outline buttons from bootstrap 4
+// Remove all backgrounds
+
+.btn-outline-primary {
+  @include button-outline-variant($btn-primary-bg);
+}
+.btn-outline-info {
+  @include button-outline-variant($btn-info-bg);
+}
+.btn-outline-success {
+  @include button-outline-variant($btn-success-bg);
+}
+.btn-outline-warning {
+  @include button-outline-variant($btn-warning-bg);
+}
+.btn-outline-danger {
+  @include button-outline-variant($btn-danger-bg);
+}
+
+
+
+
+.buttons {
+    .btn {
+        margin-right: 15px;
+        margin-top: 15px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
