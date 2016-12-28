@@ -1,0 +1,383 @@
+extends ../pug_modules/skeleton
+include ../pug_modules/section
+include ../pug_modules/elements/buttons
+include ../pug_modules/cards/headings
+include ../pug_modules/layouts/twocol
+include ../pug_modules/layouts/threecol
+include ../pug_modules/layouts/onecol
+include ../pug_modules/cards/features
+include ../pug_modules/cards/media
+include ../pug_modules/cards/footers
+include ../pug_modules/layouts/navigations
+
+
+block title
+	title test fucking page title hi
+
+block content
+	
+	+nav__menuzord({
+			brand: 'ZiON'
+		},{
+			attrs: {
+				class: ''
+			},
+			color: 'blue',
+			container: '',
+			alignment: 'right'
+		})
+		li.active
+			a(href='#about') Simple item
+		li
+			a(href='javascript:void(0)') Dropdown
+			ul.dropdown
+				li
+					a(href='#') Programming
+				li
+					a(href='#') Hosting
+				li
+					a(href='#') Design
+				li
+					a(href='#') Vectors
+		li
+			a(href='#') Web development
+			ul.dropdown
+				li
+					a(href='#') .NET
+				li
+					a(href='#') Magento
+				li
+					a(href='#') Joomla
+				li
+					a(href='#') MODX
+				li
+					a(href='#') Wordpress
+				li
+					a(href='#') Ruby on Rails
+				li
+					a(href='#') Mobile
+				li
+					a(href='#') Folders
+				li
+					a(href='#') Business cards
+
+
+
+	//- Hero header
+	+section(
+		{
+			layout: 'onecol',
+			settings: {},
+			cards: [{
+				name: 'heading',
+				content: {
+					title : 'this is zion core',
+					uptitle: 'Hello and Welcome',
+					subtitle: 'The Web template crafting framework. In order to enjoy the power of ZiON, you need to have the following softwares installed and configured correctly',
+					buttons: [{
+						content: {
+							title: 'Large button',
+							link: '#',
+							icon: 'glyphicon glyphicon-star'
+						},
+						settings: {
+							class: 'btn-primary btn-lg'
+						}
+					},
+					{
+						content: {
+							title: 'Normal button',
+							link: '#'
+						},
+						settings: {
+							class: 'btn-outline-primary btn-radius'
+						}
+					},
+					{
+						content: {
+							title: 'Small button',
+							link: '#'
+						},
+						settings: {
+							class: 'btn-danger btn-sm'
+						}
+					},
+					{
+						content: {
+							title: 'Extra Small',
+							link: '#'
+						},
+						settings: {
+							class: 'btn-warning btn-xs'
+						}
+					}]
+				}
+			}]
+		}, {
+			attrs: {
+				id : 'intro',
+				class: 'full_height'
+			},
+			container: '',
+			alignContent : 'vertical_center text-center',
+			background: {
+				parallax: true,
+				image: '',
+				video: '',
+				class: ''
+			}
+		})
+
+	+section({},{background:{class: 'background__primary'}})
+		.row
+			p.lead.col-md-8.col-md-offset-2.m-b-0 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				| tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				| quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				| consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				| cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				| proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+	//- //- Generic section
+	+section( 
+		{
+			heading: {
+				content : {
+					title: '.about us',
+					subtitle: 'Calling the heading card inside section'
+				},
+				settings : {
+					class : 'text-center'
+				}
+			},
+			layout: 'twocol',
+			settings: {},
+			cards: [{
+				name: 'image',
+				content: {
+					src: 'http://pillar.mediumra.re/img/hero27.jpg',
+					caption : 'Test title hola',
+				},
+				settings: {
+					class : 'img-responsive',
+					showCaption: false
+				}
+			}, {
+				name: 'feature',
+				content: {
+					title : 'Test title two sdfsdf',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et ',
+					buttons: [{
+						content: {
+							title: 'Learn more >',
+							link: '#'
+						},
+						settings: {
+							class: 'btn-outline-primary'
+						}
+					}]
+				},
+				settings: {
+					class : ''
+				}
+			}]
+		}, {
+			attrs: {
+				id: 'about',
+				class: '',
+			},
+			container: '',
+			alignContent : '',
+			background: {
+				parallax: true,
+				image: '',
+				video: '',
+				class: ''
+			}
+		})
+
+	
+		//- //- Generic section
+	
+	+section( 
+		{
+			heading: {
+				content : {
+					title: '.services',
+					subtitle: 'Calling the heading card inside section'
+				},
+				settings : {
+					class : 'text-center'
+				}
+			},
+			layout: 'threecol',
+			settings: {},
+			cards: [{
+				name: 'feature__with_media',
+				content: {
+					title : 'Test title two',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et ',
+					image: {
+						content: {
+							src: 'http://pillar.mediumra.re/img/hero27.jpg',
+							caption : 'Test title hola'
+						},
+						settings: {
+							class : 'img-responsive',
+							showCaption: false
+						}
+					},
+					buttons: [{
+						content: {
+							title: 'button name',
+							link: '#'
+						},
+						settings: {
+							class: 'btn-info'
+						}
+					}]
+				},
+				settings: {
+					class : ''
+				}
+			}, {
+				name: 'feature__with_media',
+				content: {
+					title : 'Test title two',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et ',
+					image: {
+						content: {
+							src: 'http://pillar.mediumra.re/img/hero27.jpg',
+							caption : 'Test title hola'
+						},
+						settings: {
+							class : 'img-responsive',
+							showCaption: false
+						}
+					},
+					buttons: [{
+						content: {
+							title: 'button name',
+							link: '#'
+						},
+						settings: {
+							class: 'btn-info'
+						}
+					}]
+				},
+				settings: {
+					class : ''
+				}
+			}, {
+				name: 'feature__with_media',
+				content: {
+					title : 'Test title two',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et ',
+					image: {
+						content: {
+							src: 'http://pillar.mediumra.re/img/hero27.jpg',
+							caption : 'Test title hola'
+						},
+						settings: {
+							class : 'img-responsive',
+							showCaption: false
+						}
+					},
+					buttons: []
+				},
+				settings: {
+					class : ''
+				}
+			}]
+		}, {
+			attrs: {
+				id: 'features',
+				class: '',
+			},
+			container: '',
+			alignContent : '',
+			background: {
+				parallax: true,
+				image: '',
+				video: '',
+				class: ''
+			}
+		})
+
+
+	+section( 
+		{
+			layout: 'onecol',
+			settings: {},
+			cards: [{
+				name: 'feature',
+				content: {
+					title : 'Test title two sdfsdf',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et ',
+					buttons: [{
+						content: {
+							title: 'Learn more >',
+							link: '#'
+						},
+						settings: {
+							class: 'btn-outline-primary'
+						}
+					}]
+				},
+				settings: {
+					class : ''
+				}
+			}]
+		}, {
+			attrs: {
+				id: 'onecolfeature',
+				class: '',
+			},
+			container: '',
+			alignContent : 'text-center',
+			background: {
+				parallax: false,
+				image: '',
+				video: '',
+				class: 'background__primary'
+			}
+		})
+
+	
+		//- //- Generic section
+
+
+	//- footer
+	+section({
+		layout: 'onecol',
+		settings: {},
+		cards: [{
+			name: 'footer',
+			content: 'copyright &copy; 2016 <a href="https://themewagon.com">Themwagon</a>', 
+			settings: {
+				class: 'text-center'
+			}
+		}]
+	}, {
+		attrs: {
+				id : 'footer',
+				class: ''
+			},
+			container: '',
+			alignContent : 'text-center',
+			background: {
+				parallax: false,
+				image: '',
+				video: '',
+				class: ''
+			}
+	})
+
+block append styles
+	link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Raleway:400,100,300,600,700,900')
+	link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i')
+	link(rel='stylesheet', type='text/css', href='assets/lib/menuzord/css/menuzord.css')
+
+block append scripts
+	script(src='assets/lib/skrollr/src/skrollr.js')
+	script(src='assets/lib/menuzord/js/menuzord.js')
+	script(src='assets/lib/smoothscroll.js')

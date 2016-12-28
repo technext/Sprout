@@ -1,0 +1,24 @@
+mixin feature(content, settings)
+	//- setting default values
+	- settings = (settings || {class:''})
+	div.feature(class=settings.class)
+		h3= content.title
+		p= content.description
+
+		if content.buttons
+			+buttons(content.buttons)
+
+
+mixin feature__with_media(content, settings)
+	//- setting default values
+	- settings = (settings || {class:''})
+	div.feature__with_media(class=settings.class)
+
+		+image(content.image.content, content.image.settings)
+
+		div.feature__content
+			h5= content.title
+			p= content.description
+
+			if content.buttons
+				+buttons(content.buttons)
