@@ -155,3 +155,10 @@ $(window).scroll(function() {
 
   }
 })();
+
+
+$("#header_slide").owlCarousel({
+    items: 1,
+    loop:true,
+    autoplay: true
+});

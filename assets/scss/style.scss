@@ -279,3 +279,26 @@ a.notify-me {
   font-size: 10px;
   text-transform: none;
 }
+
+.slide1 {
+    background: url(../images/slide1.jpg);  
+}
+.slide2 {
+    background: url(../images/slide2.jpg);
+}
+.slide3 {
+    background: url(../images/slide3.jpg);
+}
+
+.bg {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity:0;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center center;
+  position: relative;
+}
