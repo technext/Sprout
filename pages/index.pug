@@ -1,6 +1,50 @@
 extends ../pug_modules/skeleton
 
-block content
-	.text-center
+block title
+	title SPROUT - Preview page
 
-		h2 Under Construction
+block content
+	section.top-part
+		.container
+			.row
+				.col-xs-12.col-xs-offset-0.col-sm-10.col-sm-offset-1.col-lg-8.col-lg-offset-2
+					h1 - SPROUT V2 -
+					h2 Iconic Coming Soon Template
+					p
+						i Get your pack today for the price of 2 cups of coffee...
+	.alert-banner
+		p
+			i.icon.ion-trophy
+			|  Last update : 4th January 2017
+	section.variant-part
+		.container
+			.row
+				.col-xs-12.col-sm-12.col-lg-12.text-intro
+					h2 V2 = 4 Variants
+					h3 Fully Responsive • 24/7 Support • Well documented
+			.row
+				.variant.col-xs-12.col-sm-6.col-lg-6
+					a(href='image-background.html', target='_blank')
+						img.img-responsive(src='assets/images/image-background.jpg', alt='')
+						h3 01. Image-background / Countdown
+				.variant.col-xs-12.col-sm-6.col-lg-6
+					a(href='video-background.html', target='_blank')
+						img.img-responsive(src='assets/images/video-background.jpg', alt='')
+						h3 02. video-background / Countdown
+			.row
+				.variant.col-xs-12.col-sm-6.col-lg-6
+					a(href='ken-burns-background.html', target='_blank')
+						img.img-responsive(src='assets/images/ken-burns-background.jpg', alt='')
+						h3 03. ken-burns-background / Countdown
+				.variant.col-xs-12.col-sm-6.col-lg-6
+					a(href='slider-background.html', target='_blank')
+						img.img-responsive(src='assets/images/slider-background.jpg', alt='')
+						h3 04. Slideshow / Countdown
+	footer#footer
+		span.copyright
+			| Premium design by 
+			a(href='https://themewagon.com/', target='_blank') ThemeWagon
+			br
+			a(href='https://www.facebook.com/themewagon', title='facebook Themewagon', target='_blank') Join us on Facebook
+			|  & 
+			a(href='https://twitter.com/themewagon', title='twitter themewagon', target='_blank') Follow us on Twitter

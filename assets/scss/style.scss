@@ -1,8 +1,35 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
+@import "bourbon";
+
+ @include placeholder {
+    color: #fff !important;
+  }
 
 a:hover {
-  text-decoration: none;
+    color: #00c8aa;
+    text-decoration: none;
+    outline: none;
 }
+a {
+    -webkit-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+    -ms-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+    cursor: pointer;
+    color: #FFFEBF;
+}
+
+
+
+body {
+  color: #232323;
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";
+  font-size: 15pt;
+  line-height: 1.25;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 body #image-background {
   position: fixed;
@@ -37,7 +64,7 @@ body #video-background {
 
 section ul li {
   display: inline-block;
-  width: 17rem;
+  width: 13rem;
 }
 
 .timenumbers {
@@ -55,7 +82,8 @@ section ul li {
   display: table;
   height: 100vh;
   width: 100%;
-  position: relative;
+  position: absolute;
+  top: 0;
   z-index: 1;
   overflow-x: hidden;
   background: rgba(0, 0, 0, 0.4);
@@ -99,21 +127,29 @@ h1 {
 }
 
 a.notify-me {
-  color: #333;
-  padding: 9px 15px;
+  color: #fff;
+  padding: 9px 20px;
   font-size: 10px;
   font-weight: bolder;
+  background-color: #0fe0ba;
+  border-radius: 0;
+}
+
+input.form-control.notify-me {
+    background: transparent;
+    color: #fff;
+    border-radius: 0;
 }
 
 .subscribe p {
   letter-spacing: 0rem;
-  font-size: 20px;
+  font-size: 14px;
   color: #fff;
-  font-weight: bolder;
+  font-weight: 500;
 }
 
 .subscribe {
-  padding-top: 50px;
+  padding-top: 60px;
   padding-bottom: 20px;
 }
 
@@ -121,6 +157,11 @@ a.notify-me {
   padding-top: 5px;
 }
 
+.form-control:focus {
+    border-color: #ccc;
+    outline: 0;
+    box-shadow: none;
+  }
 .footer {
   position: absolute;
   bottom: 10px;
@@ -293,12 +334,104 @@ a.notify-me {
 .bg {
   position:absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   top: 0;
   left: 0;
-  opacity:0;
+  opacity:1;
   background-size: cover;
   background-repeat: repeat;
   background-position: center center;
   position: relative;
 }
+
+
+
+
+.top-part {
+    padding: 150px 0;
+    /*margin-top: 50px;*/
+    background: #f2f3f7;
+    background: url(../images/header_bg.jpg) top;
+    background-size: cover;
+  }
+.top-part p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0;
+  text-transform: none;
+  }
+
+
+.top-part  h1 {
+    font-size: 70px;
+    line-height: 1;
+    font-weight: 100;
+    margin-bottom: 25px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.top-part h2 {
+    font-weight: 300;
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #f2f3f7;
+    font-family: 'Quicksand', sans-serif;
+}
+.alert-banner {
+    background: #2D3037;
+    padding: 15px 0;
+  }
+
+.alert-banner p {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.variant-part {
+  padding: 100px 0;
+  background: #FFFFFF; }
+  .variant-part h2 {
+    color: #999999;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+  .variant-part h3 {
+    color: #666666;
+    letter-spacing: 2px;
+    font-size: 11px;
+    margin: 15px auto 80px;
+    text-transform: uppercase; }
+  .variant-part .variant {
+    margin-bottom: 30px; }
+    .variant-part .variant a img {
+      -webkit-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+      -moz-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+      -ms-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+      -o-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+      transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1); }
+    .variant-part .variant a:hover img {
+      opacity: 0.8; }
+    .variant-part .variant h3 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: #333;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 15px;
+      letter-spacing: 1px; }
+footer {
+  background: #2D3037;
+  padding: 50px 0; }
+footer span.copyright {
+    color: #999999;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 19px;
+    font-weight: 400; }
+footer span.copyright a:active, footer span.copyright a:focus {
+    color: #FFFFFF; }
+
