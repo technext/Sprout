@@ -24,7 +24,8 @@
   "dependencies": {
     "jquery": "^3.1.0",
     "bootstrap": "^3.3.6",
-    "skrollr": "^0.6.30"
+    "skrollr": "^0.6.30",
+    "owl.carousel": "^2.2.0"
   },
   "overrides": {
     "bootstrap": {
@@ -35,9 +36,6 @@
         "./lib/jquery.waypoints.js",
         "./lib/shortcuts/inview.js"
       ]
-    },
-    "owl.carousel": {
-      "main": "./owl-carousel/*"
     },
     "pace": {
       "main": [

@@ -129,6 +129,8 @@ $(window).scroll(function() {
 
 (function(){
 
+  if(document.getElementById('slideshow')==null) return;
+
 // we set the 'fx' class on the first image when the page loads
   document.getElementById('slideshow').getElementsByTagName('img')[0].className = "fx";
   
