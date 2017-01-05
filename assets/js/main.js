@@ -47,11 +47,11 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
     seconds -= minutes * 60; 
     //update the seconds variable with number of minutes removed
     
-    //conditional statements
-    if (days == 1) { thisEl.find(".timeRefDays").text("day"); } else { thisEl.find(".timeRefDays").text("days"); }
-            if (hours == 1) { thisEl.find(".timeRefHours").text("hour"); } else { thisEl.find(".timeRefHours").text("hours"); }
-            if (minutes == 1) { thisEl.find(".timeRefMinutes").text("minute"); } else { thisEl.find(".timeRefMinutes").text("minutes"); }
-            if (seconds == 1) { thisEl.find(".timeRefSeconds").text("second"); } else { thisEl.find(".timeRefSeconds").text("seconds"); }
+    // //conditional statements
+    // if (days == 1) { thisEl.find(".timeRefDays").text("day"); } else { thisEl.find(".timeRefDays").text("days"); }
+    //         if (hours == 1) { thisEl.find(".timeRefHours").text("hour"); } else { thisEl.find(".timeRefHours").text("kakon"); }
+    //         if (minutes == 1) { thisEl.find(".timeRefMinutes").text("minute"); } else { thisEl.find(".timeRefMinutes").text("minutes"); }
+    //         if (seconds == 1) { thisEl.find(".timeRefSeconds").text("second"); } else { thisEl.find(".timeRefSeconds").text("seconds"); }
     
     //logic for the two_digits ON setting
     if(settings.format == "on") {
@@ -81,22 +81,23 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
 //Provide the plugin settings
 $("#countdown").countdown({
-      //The countdown end date
-      date: "1 January 2018 12:00:00",
-      
-      // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
-      format: "on"
-      }, 
-  
-      function() {
-      // This will run when the countdown ends
-       alert("We're Out Now");
-       });
+    //The countdown end date
+    date: "1 January 2018 12:00:00",
+    
+    // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
+    format: "on"
+    }, 
+
+    function() {
+    // This will run when the countdown ends
+     alert("We're Out Now");
+});
+     
        
-       
-     function setHeights() {
-  var windowHeight = $(window).height();
-  $('.slide').height(windowHeight);
+
+function setHeights() {
+    var windowHeight = $(window).height();
+    $('.slide').height(windowHeight);
 }
 
 setHeights();

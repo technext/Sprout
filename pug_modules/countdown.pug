@@ -3,27 +3,28 @@
 
 section.main
   .content
-    .container-fluid
+    .container
       .content2
         h1 SPROUT
-        p We are coming soon
-      .counter
-        ul#countdown
-          li
-            span.days.timenumbers 01
-            p.timeRefDays.timedescription days
-          li
-            span.hours.timenumbers 00
-            p.timeRefHours.timedescription hours
-          li
-            span.minutes.timenumbers 00
-            p.timeRefMinutes.timedescription minutes
-          li
-            span.seconds.timenumbers.yellow-text 00
-            p.timeRefSeconds.timedescription seconds
+
+      .counter#countdown
+
+        h2 Launching in 
+          span.days.timenumbers 00 
+          | &nbsp;days 
+          span.hours.timenumbers 00 
+          | h 
+          span.minutes.timenumbers 00 
+          | m 
+          span.seconds.timenumbers.yellow-text 00 
+          | s
+
+        div.row
+          div.col-sm-6.col-sm-offset-3
+            p Perfect and awesome template to present your future product or service. Hooking audience attention is all in the opener.
       .subscribe
-        p Join our mailing list and we will notify you once it is ready.
-        .col-sm-4.col-sm-offset-4.input-group.subscribe-box
-          input.form-control.notify-me(type='text', placeholder='email@example.com')
-          span.input-group-btn
-            a.btn.btn-default.notify-me(href='#', type='button') NOTIFY ME
+        div.row
+          .col-sm-4.col-sm-offset-4.input-group.subscribe-box
+            input.form-control.notify-me(type='text', placeholder='email@example.com')
+            span.input-group-btn
+              a.btn.btn-default.notify-me(href='#', type='button') NOTIFY ME
