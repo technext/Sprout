@@ -1,27 +1,6 @@
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,100,300,700");
 @import "bourbon";
 
- @include placeholder {
-    color: #fff !important;
-  }
-
-a:hover {
-    color: #00c8aa;
-    text-decoration: none;
-    outline: none;
-}
-a {
-    -webkit-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
-    -moz-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
-    -ms-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
-    -o-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
-    transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
-    cursor: pointer;
-    color: #FFFEBF;
-}
-
-
-
 body {
   color: #232323;
   font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";
@@ -56,26 +35,31 @@ body #video-background {
   transform: translateX(-50%) translateY(-50%);
   background-size: cover;
   overflow: hidden;
-  /*-webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);*/
+}
+
+@include placeholder {
+  color: #fff !important;
+}
+
+a:hover {
+  color: #00c8aa;
+  text-decoration: none;
+  outline: none;
+}
+
+a {
+  transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+  cursor: pointer;
+  color: #FFFEBF;
+}
+
+p {
+  font-size: 18px;
 }
 
 section ul li {
   display: inline-block;
   width: 13rem;
-}
-
-.timenumbers {
-  display: block;
-  font-size: 38px;
-  font-weight: 300;
-  line-height: 4.5rem;
-  margin: 0 auto;
-  text-align: center;
-  color: #fff;
 }
 
 .main{
@@ -96,32 +80,6 @@ section ul li {
   vertical-align: middle;
 }
 
-p.timedescription {
-  font-size: 16px;
-  font-variant: normal;
-  line-height: 1.5rem;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  top: 0px;
-  font-weight: 300;
-  letter-spacing: 0px;
-  text-transform: uppercase;
-}
-
-.counter {
-  padding-top: 20px;
-  font-family: 'Quicksand', sans-serif;
-}
-
-p {
-  color: #E6DBAE;
-  font-size: 21px;
-  letter-spacing: 3px;
-  font-weight: 300;
-  text-transform: none;
-}
-
 h1 {
   color: #fff;
   font-weight: 100;
@@ -135,12 +93,18 @@ a.notify-me {
   font-weight: 500;
   background-color: #0fe0ba;
   border-radius: 0;
+  border-color: #0fe0ba;
 }
 
 input.form-control.notify-me {
-    background: transparent;
-    color: #fff;
-    border-radius: 0;
+  background: transparent;
+  color: #fff;
+  border-radius: 0;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+a.notify-me:hover {
+  border-color: #e6e6e6;
 }
 
 .subscribe p {
@@ -160,15 +124,9 @@ input.form-control.notify-me {
 }
 
 .form-control:focus {
-    border-color: #ccc;
-    outline: 0;
-    box-shadow: none;
-  }
-.footer {
-  position: absolute;
-  bottom: 10px;
-  font-size: 10px;
-  letter-spacing: 0px;
+  border-color: #ccc;
+  outline: 0;
+  box-shadow: none;
 }
 
 .overlay {
@@ -177,14 +135,6 @@ input.form-control.notify-me {
   height: 100%;
   background-color: #1d2437;
   opacity: .4;
-}
-
-.bg {
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  position: absolute;
 }
 
 .content-wrapper {
@@ -202,83 +152,42 @@ input.form-control.notify-me {
   opacity:0;
   transition-property: opacity, transform;
   transition-duration: 3s, 8s;
-  -webkit-transform-origin: bottom left;
-     -moz-transform-origin: bottom left;
-      -ms-transform-origin: bottom left;
-       -o-transform-origin: bottom left;
-          transform-origin: bottom left;
+  transform-origin: bottom left;
 }
 
-/**
- * We change the point of origin using four corners so images do not move in the same direction. 
- * This technique allows us to create various paths while applying the same translate() values to all images (see the 'fx' class further below).
- */
-
 #slideshow img  {
-  -webkit-transform-origin: bottom left;
-     -moz-transform-origin: bottom left;
-      -ms-transform-origin: bottom left;
-       -o-transform-origin: bottom left;
-          transform-origin: bottom left;
+  transform-origin: bottom left;
 }
 
 #slideshow :nth-child(2n+1) {
-  -webkit-transform-origin: top right;
-     -moz-transform-origin: top right;
-      -ms-transform-origin: top right;
-       -o-transform-origin: top right;
-          transform-origin: top right;
+  transform-origin: top right;
 }
 
 #slideshow :nth-child(3n+1) {
-  -webkit-transform-origin: top left;
-     -moz-transform-origin: top left;
-      -ms-transform-origin: top left;
-       -o-transform-origin: top left;
-          transform-origin: top left;
+  transform-origin: top left;
 }
 
 #slideshow :nth-child(4n+1) {
-  -webkit-transform-origin: bottom right;
-     -moz-transform-origin: bottom right;
-      -ms-transform-origin: bottom right;
-       -o-transform-origin: bottom right;
-          transform-origin: bottom right;
+  transform-origin: bottom right;
 }
-
-/**
- * Because of the stacking context, we need to make sure that the first image (in source) is not hidden by the last one. 
- * The rule below moves all images past the second one down the stack. 
- * This is because the second image needs to show on top of the first one when it transitions in.
- */
 
 #slideshow .fx:first-child + img ~ img  {
-    z-index:-1;
+  z-index:-1;
 }
-
-/**
- * Because images are styled with a different point of origin, the following rule will create different panning effects.
- */
 
 #slideshow .fx {
   opacity:1;
-  -webkit-transform: scale(1.1);
-     -moz-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-       -o-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .index-design {
   border: 2px solid #333;
-  /*padding: 10px;*/
   margin-bottom: 30px;
 }
 
 .index-design:hover {
   border: 5px solid #333;
   border-bottom: 2px solid #333;
-  /*padding: 10px;*/
   margin-bottom: 30px;
 }
 
@@ -300,9 +209,7 @@ input.form-control.notify-me {
   margin-bottom: 50px;
   margin-top: 5px;
   color: #333;
-  font-family: 'Quicksand', sans-serif;
   display: block;
-  /*font-size: 3.3rem;*/
   font-weight: bolder;
   text-align: center;
 }
@@ -312,7 +219,6 @@ input.form-control.notify-me {
   color: #fff;
   margin: 0px;
   padding: 10px;
-  font-family: 'Quicksand', sans-serif;
   font-weight: bolder;
 }
 
@@ -323,30 +229,32 @@ input.form-control.notify-me {
   text-transform: none;
 }
 
-a.a {
+a.website {
   color: #999999;
 }
 
-a.a:hover {
-    color: #00c8aa;
-    text-decoration: none;
-    outline: none;
+a.website:hover {
+  color: #00c8aa;
 }
 
 .slide1 {
-    background: url(../images/slide1.jpg);  
+  background: url(../images/slide1.jpg);  
 }
+
 .slide2 {
-    background: url(../images/slide2.jpg);
+  background: url(../images/slide2.jpg);
 }
+
 .slide3 {
-    background: url(../images/slide3.jpg);
+  background: url(../images/slide3.jpg);
 }
 
 .bg {
   position:absolute;
   width: 100%;
   height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
   top: 0;
   left: 0;
   opacity:1;
@@ -357,27 +265,25 @@ a.a:hover {
 }
 
 .top-part {
-    padding: 150px 0;
-    /*margin-top: 50px;*/
-    background: #f2f3f7;
-    background: url(../images/header_bg.jpg) top;
-    background-size: cover;
-  }
+  padding: 150px 0;
+  background: #f2f3f7;
+  background: url(../images/header_bg.jpg) top;
+  background-size: cover;
+}
+
 .top-part p {
   color: #cbcbcb;
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 0;
   text-transform: none;
-  }
-
+}
 
 .top-part  h1 {
   font-size: 67px;
   line-height: 1;
   font-weight: 100;
   margin-bottom: 25px;
-  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";
 }
 
 .top-part h2 {
@@ -386,10 +292,11 @@ a.a:hover {
   margin-bottom: 7px;
   color: #f2f3f7;
 }
+
 .alert-banner {
-    background: #2D3037;
-    padding: 15px 0;
-  }
+  background: #2D3037;
+  padding: 15px 0;
+}
 
 .alert-banner p {
   font-weight: 700;
@@ -397,11 +304,14 @@ a.a:hover {
   margin-bottom: 0;
   font-size: 16px;
   text-transform: none;
+  color: #E6DBAE;
 }
+
 .variant-part {
   padding: 100px 0;
   background: #FFFFFF;
 }
+
 .variant-part h2 {
   color: #999999;
   margin-bottom: 0;
@@ -410,6 +320,7 @@ a.a:hover {
   letter-spacing: 2px;
   font-size: 28px;
 }
+
 .variant-part h3 {
   color: #666666;
   letter-spacing: 2px;
@@ -423,10 +334,6 @@ a.a:hover {
 }
 
 .variant-part .variant a img {
-  -webkit-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
-  -moz-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
-  -ms-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
-  -o-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
   transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
@@ -441,14 +348,25 @@ a.a:hover {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 12px;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+}
 
 .label-success {
-  //  background: #f7ff1d;
-  //  color: #000;
-  //  padding: 3px 4px;
-      border-radius: 5px;
-      padding: 3px 5px 3px;
+  border-radius: 5px;
+  padding: 3px 5px 3px;
+}
+
+.counter {
+  color: #fff;
+}
+
+.counter p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.counter h2 {
+  font-size: 40px;
+  font-weight: 700;
 }
 
 footer {
@@ -470,4 +388,3 @@ footer span.copyright {
 footer span.copyright a:active, footer span.copyright a:focus {
   color: #FFFFFF;
 }
-
