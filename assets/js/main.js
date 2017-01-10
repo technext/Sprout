@@ -44,15 +44,8 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
     //update the seconds variable with number of hours removed
     
     var minutes = Math.floor(seconds / 60);
-    seconds -= minutes * 60; 
-    //update the seconds variable with number of minutes removed
-    
-    // //conditional statements
-    // if (days == 1) { thisEl.find(".timeRefDays").text("day"); } else { thisEl.find(".timeRefDays").text("days"); }
-    //         if (hours == 1) { thisEl.find(".timeRefHours").text("hour"); } else { thisEl.find(".timeRefHours").text("kakon"); }
-    //         if (minutes == 1) { thisEl.find(".timeRefMinutes").text("minute"); } else { thisEl.find(".timeRefMinutes").text("minutes"); }
-    //         if (seconds == 1) { thisEl.find(".timeRefSeconds").text("second"); } else { thisEl.find(".timeRefSeconds").text("seconds"); }
-    
+    seconds -= minutes * 60;
+
     //logic for the two_digits ON setting
     if(settings.format == "on") {
         days = (String(days).length >= 2) ? days : "0" + days;
@@ -86,11 +79,11 @@ $("#countdown").countdown({
     
     // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
     format: "on"
-    }, 
+}, 
 
-    function() {
-    // This will run when the countdown ends
-     alert("We're Out Now");
+function() {
+// This will run when the countdown ends
+ alert("We're Out Now");
 });
      
        
@@ -122,25 +115,19 @@ $(window).scroll(function() {
 });
 
 
-/**
- * The idea is to cycle through the images to apply the "fx" class to them every n seconds. 
- * We can't simply set and remove that class though, because that would make the previous image move back into its original position while the new one fades in. 
- * We need to keep the class on two images at a time (the two that are involved with the transition).
- */
-
 (function(){
 
   if(document.getElementById('slideshow')==null) return;
 
-// we set the 'fx' class on the first image when the page loads
+  // we set the 'fx' class on the first image when the page loads
   document.getElementById('slideshow').getElementsByTagName('img')[0].className = "fx";
   
-// this calls the kenBurns function every 4 seconds
-// you can increase or decrease this value to get different effects
+  // this calls the kenBurns function every 4 seconds
+  // you can increase or decrease this value to get different effects
   window.setInterval(kenBurns, 8000);   
   
-// the third variable is to keep track of where we are in the loop
-// if it is set to 1 (instead of 0) it is because the first image is styled when the page loads
+  // the third variable is to keep track of where we are in the loop
+  // if it is set to 1 (instead of 0) it is because the first image is styled when the page loads
   var images          = document.getElementById('slideshow').getElementsByTagName('img'),
       numberOfImages  = images.length,
       i               = 1;
@@ -149,14 +136,15 @@ $(window).scroll(function() {
   if(i==numberOfImages){ i = 0;}
   images[i].className = "fx";
 
-// we can't remove the class from the previous element or we'd get a bouncing effect so we clean up the one before last
-// (there must be a smarter way to do this though)
+  // we can't remove the class from the previous element or we'd get a bouncing effect so we clean up the one before last
+  // (there must be a smarter way to do this though)
   if(i===0){ images[numberOfImages-2].className = "";}
   if(i===1){ images[numberOfImages-1].className = "";}
   if(i>1){ images[i-2].className = "";}
   i++;
 
   }
+  
 })();
 
 
