@@ -25,6 +25,7 @@ section.main
       .subscribe
         div.row
           .col-sm-4.col-sm-offset-4.input-group.subscribe-box
+            form(action='action_page.php' , method='get')
             input.form-control.notify-me(type='text', placeholder='email@example.com')
             span.input-group-btn
-              a.btn.btn-default.notify-me(href='#', type='button') NOTIFY ME
+              a.btn.btn-default.notify-me(href='#', type='submit') NOTIFY ME
