@@ -154,3 +154,20 @@ $("#header_slide").owlCarousel({
     autoplay: true
 });
 
+
+$('#mc-form').ajaxChimp({
+    url: 'http://kakon.us14.list-manage.com/subscribe/post?u=bcfaf2dc56eebc1c3dc1ab3e7&id=5beb3bf09a',
+    callback: callbackFunction
+});
+
+function callbackFunction (resp) {
+    console.log(resp);
+    if (resp.result === 'success') {
+        
+        console.log('');
+    }
+    else {
+        alert('Error');
+    }
+
+}
