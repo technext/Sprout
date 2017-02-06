@@ -25,7 +25,8 @@ section.main
       .subscribe
         div.row
           .col-sm-4.col-sm-offset-4.input-group.subscribe-box
-            form#mc-form.form-inline
+            form#subscription-form.subscribe-form.form-inline
               .form-group
-                input#mc-email.form-control.notify-me(type='email', placeholder='email@example.com')
-              button.btn.btn-default.notify-me(type='submit') NOTIFY ME
+                input#subscriber-email.form-control.notify-me(type='email', placeholder='email@example.com')
+              button#subscribe-button.btn.btn-default.notify-me(type='submit', value='NOTIFY ME') NOTIFY ME
+            #subscription-response
