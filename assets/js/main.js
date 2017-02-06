@@ -155,19 +155,34 @@ $("#header_slide").owlCarousel({
 });
 
 
-$('#mc-form').ajaxChimp({
-    url: 'http://kakon.us14.list-manage.com/subscribe/post?u=bcfaf2dc56eebc1c3dc1ab3e7&id=5beb3bf09a',
-    callback: callbackFunction
+$('#subscription-form').submit(function(e) {
+
+    e.preventDefault();
+    var $form           = $('#subscription-form');
+    var submit          = $('#subscribe-button');
+    var ajaxResponse    = $('#subscription-response');
+    var email           = $('#subscriber-email').val();
+
+    $.ajax({
+        type: 'POST',
+        url: '../../php/subscribe.php',
+        dataType: 'json',
+        data: {
+            email: email
+        },
+        cache: false,
+        beforeSend: function(result) {
+            submit.val("Joining...");
+        },
+        success: function(result) {
+            if(result.sendstatus == 1) {
+                ajaxResponse.html(result.message);
+                $form.fadeOut(500);
+            } else {
+                ajaxResponse.html(result.message);
+                submit.val("Join");
+            }
+        }
+    });
+
 });
-
-function callbackFunction (resp) {
-    console.log(resp);
-    if (resp.result === 'success') {
-        
-        console.log('');
-    }
-    else {
-        alert('Error');
-    }
-
-}
