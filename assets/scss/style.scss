@@ -86,7 +86,38 @@ h1 {
   font-size: 67px;
 }
 
-button.notify-me {
+.alert-success {
+    color: #fff;
+    background-color: #27AE60;
+}
+
+.alert-danger {
+    color: #fff;
+    background-color: #FF1D4D;
+}
+
+.alert {
+    font-size: 14px;
+    padding: 15px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    border: 0px solid transparent;
+    border-radius: 0px;
+}
+
+.input-group-addon {
+    padding: 0px 0px;
+    font-size: 0px;
+    font-weight: 0;
+    line-height: 0;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 0px solid #ccc;
+    border-radius: 0px;
+}
+
+input.notify-me {
   color: #fff;
   padding: 7.5px 20px;
   font-size: 12px;
@@ -103,7 +134,7 @@ input.form-control.notify-me {
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-button.notify-me:hover {
+input.notify-me:hover {
   border-color: #e6e6e6;
 }
 
