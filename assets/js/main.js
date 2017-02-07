@@ -165,7 +165,7 @@ $('#subscription-form').submit(function(e) {
 
     $.ajax({
         type: 'POST',
-        url: '../../php/subscribe.php',
+        url: '././php/subscribe.php',
         dataType: 'json',
         data: {
             email: email

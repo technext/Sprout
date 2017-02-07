@@ -25,8 +25,9 @@ section.main
       .subscribe
         div.row
           .col-sm-4.col-sm-offset-4.input-group.subscribe-box
-            form#subscription-form.subscribe-form.form-inline
-              .form-group
-                input#subscriber-email.form-control.notify-me(type='email', placeholder='email@example.com')
-              button#subscribe-button.btn.btn-default.notify-me(type='submit', value='NOTIFY ME') NOTIFY ME
+            form#subscription-form.subscribe-form
+              .input-group
+                input#subscriber-email.form-control.notify-me(name='email', type='email', placeholder='Enter your email address', required='')
+                span.input-group-addon
+                  input#subscribe-button.btn.btn-default.notify-me(type='submit', value='NOTIFY ME')
             #subscription-response
