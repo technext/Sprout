@@ -4,32 +4,31 @@
   "description": "Web template crafting machine",
   "main": "gulpfile.js",
   "dependencies": {
-    "browser-sync": "^2.13.0",
+    "browser-sync": "^2.18.7",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-gm": "0.0.8",
+    "gulp-imagemin": "^3.1.1",
     "gulp-jade": "^1.1.0",
     "gulp-plumber": "^1.1.0",
     "gulp-preprocess": "^2.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-rtlcss": "^1.0.0",
     "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^2.0.0",
-    "gulp-watch": "^4.3.8",
+    "gulp-sourcemaps": "^1.11.1",
+    "gulp-uglify": "^2.0.1",
+    "gulp-watch": "^4.3.11",
     "main-bower-files": "^2.13.1",
     "node-bourbon": "^4.2.8",
-    "pug": "^2.0.0-beta3",
-    "require-dir": "^0.3.0",
-    "del": "^2.2.2",
-    "gulp-imagemin": "^3.0.3"
+    "pug": "^2.0.0-beta9",
+    "require-dir": "^0.3.1"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
     "minify": "gulp minify"
-   
   },
   "author": "Ashraful Prium <prium47@gmail.com>",
   "license": "ISC"
