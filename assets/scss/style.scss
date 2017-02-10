@@ -126,6 +126,7 @@ h1 {
       background-color: #0fe0ba;
       border-radius: 0;
       border-color: #0fe0ba;
+      transition: all 0.5s ease-in-out;
   }
 }
 
@@ -137,6 +138,7 @@ input.notify-me {
   background-color: #0fe0ba;
   border-radius: 0;
   border-color: #0fe0ba;
+  transition: all 0.5s ease-in-out;
 }
 
 input.form-control.notify-me {
