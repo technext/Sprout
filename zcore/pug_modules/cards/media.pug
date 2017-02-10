@@ -1,5 +1,0 @@
-mixin image(content, settings)
-	div.media__wrapper
-		img(src=content.src, class=settings.class, alt=content.caption)
-		if settings.showCaption
-			p!= content.caption

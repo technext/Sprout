@@ -1,2 +1,0 @@
-# ZiONCore
-Core for ZiON
