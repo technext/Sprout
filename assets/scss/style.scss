@@ -117,6 +117,18 @@ h1 {
     border-radius: 0px;
 }
 
+@media only screen and (max-width: 767px) {
+    input.notify-me {
+      color: #fff;
+      padding: 7.5px 5px !important;
+      font-size: 11px ;
+      font-weight: 500;
+      background-color: #0fe0ba;
+      border-radius: 0;
+      border-color: #0fe0ba;
+  }
+}
+
 input.notify-me {
   color: #fff;
   padding: 7.5px 20px;
