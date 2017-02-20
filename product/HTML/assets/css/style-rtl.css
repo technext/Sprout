@@ -62,7 +62,7 @@ a:hover {
 a {
   transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
   cursor: pointer;
-  color: #FFFEBF;
+  color: #FFF;
 }
 
 p {
@@ -365,7 +365,7 @@ a.website:hover {
 }
 
 .alert-banner {
-  background: #2D3037;
+  background: #101e2a;
   padding: 15px 0;
 }
 
@@ -375,7 +375,8 @@ a.website:hover {
   margin-bottom: 0;
   font-size: 16px;
   text-transform: none;
-  color: #E6DBAE;
+  color: #fff;
+  line-height: 30px;
 }
 
 .variant-part {
@@ -441,7 +442,7 @@ a.website:hover {
 }
 
 footer {
-  background: #2D3037;
+  background: #101e2a;
   padding: 50px 0;
 }
 
@@ -458,4 +459,19 @@ footer span.copyright {
 
 footer span.copyright a:active, footer span.copyright a:focus {
   color: #FFFFFF;
+}
+
+a.purchase {
+  border: 1px solid #00c8aa;
+  font-weight: 700;
+  position: fixed;
+  font-size: 13px;
+  width: 200px;
+  height: 60px;
+  letter-spacing: 1px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #00c8aa;
+  border-radius: 0;
 }
